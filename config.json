@@ -1,0 +1,23 @@
+{
+    "params":
+        {
+            "local_host": "True",
+            "local_uri": "mysql+pymysql://root:@localhost/coding _thunder",
+            "prod_uri": "mysql+pymysql://root:@localhost/coding_thunder",
+            "fb_url": "https://facebook.com/codingthunder",
+            "tw_url": "https://twitter.com/codingthunder",
+            "gh_url": "https://github.com/codingthunder",
+            "blog_name": "Coding Thunder",
+            "tag_line": "A Blog liked by Programmers",
+            "gmail-user": "",
+            "gmail-password": "",
+            "about_text": "Hi, I am Batman, a programmer and a web developer. I love to write blogs and code.",
+            "no_of_posts": 2,
+            "admin_user": "admin@gmail.com",
+            "admin_password": "1234",
+            "upload_location": "C:/Users/anyth/OneDrive/Desktop/NewFlask/static/img"
+    }
+
+
+
+}
