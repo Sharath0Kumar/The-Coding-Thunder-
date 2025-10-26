@@ -1,0 +1,58 @@
+{% extends "layouts.html" %}
+{% block body %}
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('{{url_for('static',filename='assets/img/home-bg.jpg') }}')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>Admin Panel</h1>
+                    <span class="subheading">Manage your post and change them</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content-->
+ <h1>Basic Action </h1>
+                    <a href="/dashboard"><button class="btn btn-primary">Dashbard Home</button></a>
+                    <a href="/logout"><button class="btn btn-primary">Logout</button></a>
+                    
+                    <hr>
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <h1>Add / Edit Post</h1>
+            <form id="contactForm" action="/edit/{{sno}}" method="POST">
+                <div class="form-floating">
+                    <input class="form-control" id="title" name="title" type="text" placeholder="Edit your Title..." required  value="{{post.title}}"/>
+                    <label for="title">Title</label>
+                    <div class="invalid-feedback">A title is required.</div>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" id="tagline" name="tagline" type="text" value="{{post.tagline}}" placeholder="Enter your tagline..." required  />
+                    <label for="tagline">Tagline</label>
+                    <div class="invalid-feedback">A tagline is required.</div>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" id="slug" name="slug" type="text" placeholder="Enter your slug..." required  value="{{post.slug}}"/>
+                    <label for="slug">Slug</label>
+                    <div class="invalid-feedback">A slug is required.</div>
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control" id="content" name="content" placeholder="Enter your content here..."  value="{{post.content}}" style="height: 12rem" required></textarea>
+                    <label for="content">Content</label>
+                    <div class="invalid-feedback">Content is required.</div>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" id="img_file" name="img_file" type="text" placeholder="Upload your img file here..."  value="{{post.img_file}}" />
+                    <label for="img_file">Img File</label>
+                    <div class="invalid-feedback">Image file name is required.</div>
+                </div>
+                <br />
+                <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
